@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- fontawesome css file -->
+     <link rel="stylrsheet" href="./css/all.min.css">
+    <!-- bootstrap css file -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- main css file  -->
+     <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+        <div id="container">
+            <div id="register-section" class="hidden">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <input type="text" id="full-name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button class="btn btn-outline-info type="submit">Register</button>
+                </form>
+                <p class="error-message" id="register-error"></p>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            </div>
+    
+            <div id="login-section">
+                <h1>Smart Login System</h1>
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Enter your Email" required>
+                    <input type="password" id="login-password" placeholder="Enter your Password" required>
+                    <button class="btn btn-outline-info mt-3" type="submit">Login</button>
+                </form>
+                <p class="error-message" id="login-error"></p>
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Sign Up</a></p>
+            </div>
+    
+            <div id="home-section" class="hidden">
+                <h2>Welcome, <span id="user-name"></span>!</h2>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+  
+
+
+    <!-- bootstrap js file -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- main js file -->
+     <script src="./js/index.js"></script>
+</body>
+</html>
